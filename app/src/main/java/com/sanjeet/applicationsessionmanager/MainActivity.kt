@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         Timber.plant(Timber.DebugTree());
         setContentView(R.layout.activity_main)
 
-        Toast.makeText(this@MainActivity, "Session data logged to Timber", Toast.LENGTH_LONG).show()
+
 
         val btn: TextView = findViewById(R.id.txt)
 
