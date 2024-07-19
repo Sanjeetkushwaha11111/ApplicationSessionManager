@@ -8,10 +8,29 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txt"
+        android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Button One"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button Two"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:padding="20dp"
+        android:fontFamily="sans-serif-condensed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
