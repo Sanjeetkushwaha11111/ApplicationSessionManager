@@ -10,6 +10,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import kotlin.jvm.Throws
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,12 +24,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val btn: TextView = findViewById(R.id.txt)
+        val btn1: TextView = findViewById(R.id.btn1)
+        val btn2: TextView = findViewById(R.id.btn2)
 
         // Access SessionManager from Application class
         sessionManager = (application as MyApplication).sessionManager
 
-        btn.setOnClickListener {
+        btn1.setOnClickListener {
             // Retrieve and log all session data
             CoroutineScope(Dispatchers.Main).launch {
                 sessionManager.getSessionData(this, deleteAfterRetrieving = false) { sessions ->
@@ -38,6 +40,11 @@ class MainActivity : AppCompatActivity() {
                 }
                 Toast.makeText(this@MainActivity, "Session data logged to Timber", Toast.LENGTH_LONG).show()
             }
+        }
+
+
+        btn2.setOnClickListener {
+            throw RuntimeException("App Crashed")
         }
     }
 }
