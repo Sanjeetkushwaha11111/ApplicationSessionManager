@@ -45,7 +45,7 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
-    implementation(project(":sessionManager"))
+    implementation(project(":ApplicationSessionManager"))
     implementation (libs.timber)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)

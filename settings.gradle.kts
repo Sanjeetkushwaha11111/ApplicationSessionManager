@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ApplicationSessionManager"
 include(":app")
-include(":sessionManager")
+include(":ApplicationSessionManager")
