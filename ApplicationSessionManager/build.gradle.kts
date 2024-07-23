@@ -49,8 +49,8 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("ReleaseAar") {
-            groupId = "com.github.Sanjeetkushwaha11111"
-            artifactId = "application-session-manager"
+            groupId = "com.github.Sanjeet"
+            artifactId = "session-manager"
             version = "1.0.0"
             afterEvaluate {
                 artifact(tasks.getByName("bundleReleaseAar"))
