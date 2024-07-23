@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     id("maven-publish")
-
 }
 
 android {
@@ -12,7 +11,6 @@ android {
 
     defaultConfig {
         minSdk = 24
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -36,24 +34,18 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.room.ktx)
-    implementation(libs.androidx.room.runtime)
+    api(libs.androidx.room.ktx)
+    api(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
-    implementation (libs.timberkt)
+    api(libs.timberkt)
+    api(libs.gson)
+    api(libs.jsoup)
+    api(libs.kotlinx.coroutines.core)
     testImplementation(libs.junit)
-
-
-    implementation (libs.gson)
-    implementation (libs.jsoup)
-    implementation(libs.kotlinx.coroutines.core)
-
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
 publishing {
     publications {
         create<MavenPublication>("ReleaseAar") {
